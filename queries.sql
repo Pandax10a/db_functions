@@ -30,3 +30,11 @@ select fsc.make, fsc.model, fsc.`year`, d.name, d.location
 from for_sale_cars fsc inner join dealership d on fsc.dealership_id =d.id 
 where fsc.`year` > '2020'
 order by fsc.`year` asc;
+
+select year, count(year)
+from for_sale_cars fsc
+where `year`=2019;
+
+select fsc.make, count(fsc.make)
+from for_sale_cars fsc
+where fsc.dealership_id ='6';

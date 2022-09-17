@@ -28,5 +28,5 @@ limit 1;
 
 select fsc.make, fsc.model, fsc.`year`, d.name, d.location
 from for_sale_cars fsc inner join dealership d on fsc.dealership_id =d.id 
-where `year` > '2020'
-order by `year` asc;
+where fsc.`year` > '2020'
+order by fsc.`year` asc;

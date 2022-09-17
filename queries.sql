@@ -38,3 +38,18 @@ where `year`=2019;
 select fsc.make, count(fsc.make)
 from for_sale_cars fsc
 where fsc.dealership_id ='6';
+
+select count(fsc.id)
+from for_sale_cars fsc inner join dealership d on fsc.id = d.id 
+group by dealership_id;
+
+select count(fsc.id)
+from for_sale_cars fsc inner join dealership d on fsc.dealership_id =d.id
+group by d.id
+having (count(fsc.id) > 3);
+
+select count(fsc.id)
+from for_sale_cars fsc inner join dealership d on fsc .dealership_id =d.id
+where `year` >'2017'
+group by d.id
+having count(fsc.id) > 2;

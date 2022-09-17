@@ -23,6 +23,7 @@ order by `year` desc;
 
 select d.name, d.location
 from dealership d
+order by d.date_established asc 
 limit 1;
 
 select fsc.make, fsc.model, fsc.`year`, d.name, d.location
